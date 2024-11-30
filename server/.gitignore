@@ -3,3 +3,4 @@ __pycache__
 *.json
 utils/*.txt
 utils/*.json
+.env*
