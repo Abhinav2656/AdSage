@@ -5,8 +5,8 @@ import base64
 import logging
 import faiss
 import numpy as np
+import random
 
-# Web Framework and Middleware
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -102,18 +102,28 @@ class BedrockProcessor:
 
     def store_embedding(self, url: str, text: str, embedding: np.ndarray):
         """
-        Store embedding in FAISS with rich metadata
+        Store embedding in FAISS with robust error handling
         """
         if self.vector_index is None:
             logger.warning("Vector index not initialized")
             return None
 
         try:
+            # Validate inputs
+            if embedding is None:
+                logger.warning("Cannot store None embedding")
+                return None
+
+            # Validate embedding dimensions
+            if len(embedding) != self.embedding_dimension:
+                logger.error(f"Embedding dimension mismatch. Expected {self.embedding_dimension}, got {len(embedding)}")
+                return None
+
             # Normalize embedding
-            embedding = embedding / np.linalg.norm(embedding)
+            embedding_normalized = embedding / np.linalg.norm(embedding)
             
             # Add to FAISS index
-            self.vector_index.add(embedding.reshape(1, -1))
+            self.vector_index.add(embedding_normalized.reshape(1, -1))
             
             # Store metadata
             self.vector_metadata.append({
@@ -125,18 +135,115 @@ class BedrockProcessor:
             return len(self.vector_metadata) - 1
         
         except Exception as e:
-            logger.error(f"Vector storage error: {e}")
+            logger.error(f"Vector storage error: {str(e)}")
+            logger.error(f"Embedding details: {embedding}")
             return None
+
+    def construct_image_prompt(self, context: str, user_prompt: str = "") -> str:
+        """
+        Sophisticated prompt engineering with strict length constraints
+        """
+        # Clean and prepare inputs
+        context = self._clean_text(context)[:256]  # Limit context length
+        user_prompt = self._clean_text(user_prompt)[:128]  # Limit user prompt
+        
+        # Concise prompt construction
+        prompt_components = [
+            "Ultra-realistic image:",
+            context,
+            "Creative direction: Professional, modern design.",
+            "Technical specs: High-quality, crisp rendering."
+        ]
+        
+        # Incorporate user-specific requirements if space permits
+        if user_prompt:
+            prompt_components.append(f"Requirements: {user_prompt}")
+        
+        # Combine and strictly truncate prompt
+        full_prompt = " ".join(prompt_components)[:512]
+        return full_prompt
+
+    def generate_images(self, 
+                    context: str = "", 
+                    user_prompt: str = "", 
+                    num_images: int = 1):
+        """
+        Advanced image generation with comprehensive error handling
+        """
+        # Create a concise, precise image generation prompt
+        full_prompt = self.construct_image_prompt(context, user_prompt)
+        logger.info(f"Image Generation Prompt: {full_prompt}")
+        
+        generated_images = []
+        seed = random.randint(0, 2147483647)
+        
+        for _ in range(num_images):
+            try:
+                # Refined request structure for Titan Image Generator
+                native_request = {
+                    "taskType": "TEXT_IMAGE",
+                    "textToImageParams": {
+                        "text": full_prompt
+                    },
+                    "imageGenerationConfig": {
+                        "numberOfImages": 1,
+                        "quality": "standard",
+                        "height": 1024,
+                        "width": 1024,
+                        "cfgScale": 10.0,
+                        "seed": seed
+                    }
+                }
+                
+                # Serialize the request body
+                request_body = json.dumps(native_request)
+                
+                # Invoke the model with the exact specification
+                response = self.bedrock_runtime.invoke_model(
+                    modelId=self.image_model_id, 
+                    contentType="application/json",
+                    accept="application/json",
+                    body=request_body
+                )
+                
+                # Safely parse the response
+                model_response = json.loads(response["body"].read())
+                
+                # Extract and process images
+                if "images" in model_response:
+                    images = model_response["images"]
+                    
+                    # Validate and collect non-empty images
+                    for img in images:
+                        if img and len(img) > 0:
+                            generated_images.append(img)
+                            break  # Take the first valid image
+            
+            except Exception as e:
+                # Comprehensive error logging
+                logger.error(f"Image generation error: {e}")
+                logger.error(f"Full error details: {type(e)}")
+        
+        # Final validation and logging
+        if not generated_images:
+            logger.error("No images were successfully generated across all attempts")
+        
+        return generated_images
 
     def search_similar_embeddings(self, query_embedding: np.ndarray, top_k: int = 3):
         """
-        Advanced similarity search with FAISS
+        Advanced similarity search with comprehensive error handling
         """
         if self.vector_index is None:
             logger.warning("Vector index not initialized")
             return []
 
         try:
+            # Validate query embedding
+            if query_embedding is None or len(query_embedding) != self.embedding_dimension:
+                logger.error(f"Invalid query embedding. Expected dimension {self.embedding_dimension}")
+                return []
+
             # Normalize query embedding
             query_embedding = query_embedding / np.linalg.norm(query_embedding)
             
@@ -149,7 +256,7 @@ class BedrockProcessor:
             # Process and return results
             results = []
             for distance, idx in zip(D[0], I[0]):
-                if idx < len(self.vector_metadata):
+                if 0 <= idx < len(self.vector_metadata):
                     metadata = self.vector_metadata[idx]
                     results.append({
                         'metadata': metadata,
@@ -161,82 +268,6 @@ class BedrockProcessor:
         except Exception as e:
             logger.error(f"Vector search error: {e}")
             return []
-
-    def generate_images(self, 
-                        context: str = "", 
-                        user_prompt: str = "", 
-                        num_images: int = 1):
-        """
-        Advanced image generation with precise prompt engineering
-        """
-        # Create a comprehensive, nuanced image generation prompt
-        full_prompt = self._construct_image_prompt(context, user_prompt)
-        logger.info(f"Image Generation Prompt: {full_prompt}")
-        
-        generated_images = []
-        
-        for _ in range(num_images):
-            try:
-                native_request = {
-                    "taskType": "TEXT_IMAGE",
-                    "textToImageParams": {
-                        "text": full_prompt,
-                        "negativeText": "low quality, blurry, unprofessional, amateur"
-                    },
-                    "imageGenerationConfig": {
-                        "numberOfImages": 1,
-                        "quality": "premium",
-                        "cfgScale": 10,  # Increased creativity
-                        "height": 1024,
-                        "width": 1024,
-                        "seed": None,  # Random seed for variety
-                    }
-                }
-                
-                response = self.bedrock_runtime.invoke_model(
-                    modelId=self.image_model_id, 
-                    body=json.dumps(native_request)
-                )
-                
-                model_response = json.loads(response["body"].read())
-                image_data = model_response.get("images", [])
-                
-                if image_data:
-                    generated_images.append(image_data[0])
-            
-            except Exception as e:
-                logger.error(f"Image generation error: {e}")
-        
-        return generated_images
-
-    def _construct_image_prompt(self, context: str, user_prompt: str = "") -> str:
-        """
-        Sophisticated prompt engineering for precise image generation
-        """
-        # Clean and prepare inputs
-        context = self._clean_text(context)
-        user_prompt = self._clean_text(user_prompt)
-        
-        # Comprehensive prompt construction
-        prompt_components = [
-            "Ultra-realistic, high-definition image:",
-            context,
-            "Creative direction: Professional, modern, visually striking design.",
-            "Technical specifications:",
-            "- Crisp, detailed rendering",
-            "- Balanced composition",
-            "- Sophisticated color palette",
-            "- Cinematic lighting",
-            "- Minimalist yet impactful visual storytelling"
-        ]
-        
-        # Incorporate user-specific requirements
-        if user_prompt:
-            prompt_components.append(f"Specific requirements: {user_prompt}")
-        
-        # Combine and truncate prompt
-        full_prompt = " ".join(prompt_components)
-        return full_prompt[:self.max_prompt_length]
 
 class WebContentExtractor:
     @staticmethod
@@ -275,22 +306,22 @@ def create_flask_app():
     @app.route('/generate-ad-images', methods=['POST'])
     def generate_ad_images():
         """
-        Generate ad images based on website content or user prompt
+        Generate ad images with robust error handling
         """
         data = request.json or {}
         url = data.get('url')
         user_prompt = data.get('user_prompt', '')
         
         # Default content if no URL
-        content = 'Generic advertisement design'
+        content = 'Professional marketing design'
         
         if url:
-            content = WebContentExtractor.extract_website_content(url) or 'Generic website content'
+            content = WebContentExtractor.extract_website_content(url) or content
         
         try:
             # Optional: Generate and store embedding
             content_embedding = bedrock_processor.generate_embedding(content)
-            if url and content_embedding:
+            if url and content_embedding is not None:
                 bedrock_processor.store_embedding(url, content, content_embedding)
             
             # Generate images
@@ -299,16 +330,21 @@ def create_flask_app():
                 user_prompt=user_prompt
             )
             
+            # Ensure images is always a list
+            safe_images = generated_images if generated_images else []
+            
             return jsonify({
-                "images": generated_images
+                "images": safe_images,
+                "success": len(safe_images) > 0
             })
         
         except Exception as e:
-            logger.error(f"Image generation error: {e}")
+            logger.error(f"Comprehensive image generation error: {e}")
             return jsonify({
                 "error": "Image generation failed", 
                 "details": str(e),
-                "images": []
+                "images": [],
+                "success": False
             }), 500
 
     @app.route('/search-similar-content', methods=['POST'])

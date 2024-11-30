@@ -6,3 +6,186 @@
 2024-11-30 15:04:41,392 - INFO - Found credentials in environment variables.
 2024-11-30 15:04:41,429 - WARNING -  * Debugger is active!
 2024-11-30 15:04:41,436 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:34:11,199 - INFO - Image Generation Prompt: Ultra-realistic, high-definition image: Generic advertisement design Creative direction: Professional, modern, visually striking design. Technical specifications: - Crisp, detailed rendering - Balanced composition - Sophisticated color palette - Cinematic lighting - Minimalist yet impactful visual storytelling Specific requirements: Generate ad image for a Hackathon named "CreativeVerse"
+2024-11-30 15:34:11,526 - ERROR - Image generation error: An error occurred (ValidationException) when calling the InvokeModel operation: Malformed input request: #/imageGenerationConfig/seed: expected type: Integer, found: Null, please reformat your input and try again.
+2024-11-30 15:34:11,530 - INFO - 127.0.0.1 - - [30/Nov/2024 15:34:11] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 15:35:54,309 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:35:54,310 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:35:54,314 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:35:54,933 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:36:15,205 - INFO - Found credentials in environment variables.
+2024-11-30 15:36:15,404 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 15:36:15,404 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 15:36:15,414 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:36:15,864 - INFO - Found credentials in environment variables.
+2024-11-30 15:36:15,935 - WARNING -  * Debugger is active!
+2024-11-30 15:36:15,938 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:37:28,661 - INFO - Image Generation Prompt: Ultra-realistic, high-definition image: Generic advertisement design Creative direction: Professional, modern, visually striking design. Technical specifications: - Crisp, detailed rendering - Balanced composition - Sophisticated color palette - Cinematic lighting - Minimalist yet impactful visual storytelling Specific requirements: Generate an image for an advertisement about a Hackathon named "CreativeVerse".
+2024-11-30 15:37:28,964 - ERROR - Image generation error: An error occurred (ValidationException) when calling the InvokeModel operation: Malformed input request, please reformat your input and try again.
+2024-11-30 15:37:28,966 - INFO - 127.0.0.1 - - [30/Nov/2024 15:37:28] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 15:37:59,672 - INFO - Image Generation Prompt: Ultra-realistic, high-definition image: Generic advertisement design Creative direction: Professional, modern, visually striking design. Technical specifications: - Crisp, detailed rendering - Balanced composition - Sophisticated color palette - Cinematic lighting - Minimalist yet impactful visual storytelling Specific requirements: Generate an image for an advertisement about a Hackathon named CreativeVerse.
+2024-11-30 15:39:26,148 - INFO - Found credentials in environment variables.
+2024-11-30 15:39:26,295 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 15:39:26,296 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 15:39:26,331 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:39:26,818 - INFO - Found credentials in environment variables.
+2024-11-30 15:39:26,869 - WARNING -  * Debugger is active!
+2024-11-30 15:39:26,883 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:40:22,789 - INFO - Image Generation Prompt: Ultra-realistic, high-definition image: Generic advertisement design Creative direction: Professional, modern, visually striking design. Technical specifications: - Crisp, detailed rendering - Balanced composition - Sophisticated color palette - Cinematic lighting - Minimalist yet impactful visual storytelling Specific requirements: Generate an advertisement image about a hackathon named CreativeVerse.
+2024-11-30 15:43:05,999 - INFO - 127.0.0.1 - - [30/Nov/2024 15:43:05] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 15:44:54,759 - ERROR - Image generation error: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-11-30 15:44:54,761 - INFO - 127.0.0.1 - - [30/Nov/2024 15:44:54] "[35m[1mPOST /generate-ad-images HTTP/1.1[0m" 500 -
+2024-11-30 15:46:53,220 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:46:53,221 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:46:53,225 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:46:54,011 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:46:54,727 - INFO - Found credentials in environment variables.
+2024-11-30 15:46:54,830 - WARNING -  * Debugger is active!
+2024-11-30 15:46:54,830 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:47:00,706 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:47:00,706 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:47:00,710 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:47:01,171 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:47:01,585 - INFO - Found credentials in environment variables.
+2024-11-30 15:47:01,637 - WARNING -  * Debugger is active!
+2024-11-30 15:47:01,637 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:47:53,945 - ERROR - Image generation error: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-11-30 15:47:53,947 - INFO - 127.0.0.1 - - [30/Nov/2024 15:47:53] "[35m[1mPOST /generate-ad-images HTTP/1.1[0m" 500 -
+2024-11-30 15:52:43,673 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:52:43,673 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:52:43,677 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:52:43,944 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:54:09,967 - INFO - Found credentials in environment variables.
+2024-11-30 15:54:10,137 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 15:54:10,137 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 15:54:10,171 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:54:10,585 - INFO - Found credentials in environment variables.
+2024-11-30 15:54:10,634 - WARNING -  * Debugger is active!
+2024-11-30 15:54:10,648 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:55:01,587 - ERROR - Vector storage error: 
+2024-11-30 15:55:01,588 - INFO - Image Generation Prompt: Ultra-realistic, high-definition image: Rocketium - Hackathon AI is transforming the creative industry by empowering creative teams to produce more content, faster, and at lower costs. But this is only the beginning! Thereas a world of possibilities waiting to be unlocked, and we at Rocketium are calling on brilliant software engineers to lead the charge in reimagining the future of creativity. Unleash your superpowers Build AI tools that transform marketing for the worldas biggest brands Claim your reward Battle for INR 1,00,000+ in cash prizes with your most heroic solution Earn your badge of honor Gain the bragging rights of winning an AWS-sponsored event Learn from the best Network with peers and gain valuable takeaways from industry leaders Create large volumes of ads in various sizes and formats for digital channels Creative direction: Professional, modern, visually striking design. Technical specifications: - Crisp, detailed rendering - Balanced composition - Sophisticated color palette - Cinematic lighting - Minimalist yet impactful visual storytelling Specific requirements: Generate an Ad image containing info from the website url.
+2024-11-30 15:55:02,489 - ERROR - Image generation error: An error occurred (ValidationException) when calling the InvokeModel operation: Malformed input request, please reformat your input and try again.
+2024-11-30 15:55:02,490 - ERROR - Full error details: <class 'botocore.errorfactory.ValidationException'>
+2024-11-30 15:55:02,490 - ERROR - Response details: {'Error': {'Message': 'Malformed input request, please reformat your input and try again.', 'Code': 'ValidationException'}, 'ResponseMetadata': {'RequestId': '4fb9e3cc-39b4-4627-92fb-94bb80b8ec9a', 'HTTPStatusCode': 400, 'HTTPHeaders': {'date': 'Sat, 30 Nov 2024 15:55:01 GMT', 'content-type': 'application/json', 'content-length': '80', 'connection': 'keep-alive', 'x-amzn-requestid': '4fb9e3cc-39b4-4627-92fb-94bb80b8ec9a', 'x-amzn-errortype': 'ValidationException:http://internal.amazon.com/coral/com.amazon.bedrock/'}, 'RetryAttempts': 0}, 'message': 'Malformed input request, please reformat your input and try again.'}
+2024-11-30 15:55:02,490 - ERROR - No images were successfully generated across all attempts
+2024-11-30 15:55:02,491 - INFO - 127.0.0.1 - - [30/Nov/2024 15:55:02] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 15:56:43,884 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:56:43,884 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:56:43,905 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:56:44,457 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:56:44,947 - INFO - Found credentials in environment variables.
+2024-11-30 15:56:44,997 - WARNING -  * Debugger is active!
+2024-11-30 15:56:44,997 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:56:50,218 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:56:50,218 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:56:50,222 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:56:51,373 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:56:51,816 - INFO - Found credentials in environment variables.
+2024-11-30 15:56:51,873 - WARNING -  * Debugger is active!
+2024-11-30 15:56:51,873 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:57:20,916 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:57:20,916 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:57:20,929 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 15:57:21,275 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:57:21,671 - INFO - Found credentials in environment variables.
+2024-11-30 15:57:21,724 - WARNING -  * Debugger is active!
+2024-11-30 15:57:21,724 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:58:19,759 - INFO - Found credentials in environment variables.
+2024-11-30 15:58:19,817 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 15:58:19,817 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 15:58:19,821 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 15:58:20,257 - INFO - Found credentials in environment variables.
+2024-11-30 15:58:20,323 - WARNING -  * Debugger is active!
+2024-11-30 15:58:20,323 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 15:58:46,907 - ERROR - Vector storage error: 
+2024-11-30 15:58:46,907 - ERROR - Comprehensive image generation error: 'BedrockProcessor' object has no attribute '_construct_image_prompt'
+2024-11-30 15:58:46,908 - INFO - 127.0.0.1 - - [30/Nov/2024 15:58:46] "[35m[1mPOST /generate-ad-images HTTP/1.1[0m" 500 -
+2024-11-30 16:01:15,055 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:01:15,056 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:01:15,073 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:01:15,392 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:02:15,195 - INFO - Found credentials in environment variables.
+2024-11-30 16:02:15,250 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 16:02:15,250 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 16:02:15,255 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:02:15,668 - INFO - Found credentials in environment variables.
+2024-11-30 16:02:15,721 - WARNING -  * Debugger is active!
+2024-11-30 16:02:15,721 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:03:02,588 - ERROR - Embedding dimension mismatch. Expected 1536, got 1024
+2024-11-30 16:03:02,589 - INFO - Image Generation Prompt: Ultra-realistic, high-definition image: Rocketium - Hackathon AI is transforming the creative industry by empowering creative teams to produce more content, faster, and at lower costs. But this is only the beginning! Thereas a world of possibilities waiting to be unlocked, and we at Rocketium are calling on brilliant software engineers to lead the charge in reimagining the future of creativity. Unleash your superpowers Build AI tools that transform marketing for the worldas biggest brands Claim your reward Battle for INR 1,00,000+ in cash prizes with your most heroic solution Earn your badge of honor Gain the bragging rights of winning an AWS-sponsored event Learn from the best Network with peers and gain valuable takeaways from industry leaders Create large volumes of ads in various sizes and formats for digital channels Creative direction: Professional, modern, visually striking design. Technical specifications: - Crisp, detailed rendering - Balanced composition - Sophisticated color palette - Cinematic lighting - Minimalist yet impactful visual storytelling Specific requirements: Generate an Ad image containing info from the website url.
+2024-11-30 16:03:02,901 - ERROR - Image generation error: An error occurred (ValidationException) when calling the InvokeModel operation: Malformed input request, please reformat your input and try again.
+2024-11-30 16:03:02,901 - ERROR - Full error details: <class 'botocore.errorfactory.ValidationException'>
+2024-11-30 16:03:02,901 - ERROR - Response details: {'Error': {'Message': 'Malformed input request, please reformat your input and try again.', 'Code': 'ValidationException'}, 'ResponseMetadata': {'RequestId': 'b34626aa-a759-4b73-aa16-0ee246c001b7', 'HTTPStatusCode': 400, 'HTTPHeaders': {'date': 'Sat, 30 Nov 2024 16:03:02 GMT', 'content-type': 'application/json', 'content-length': '80', 'connection': 'keep-alive', 'x-amzn-requestid': 'b34626aa-a759-4b73-aa16-0ee246c001b7', 'x-amzn-errortype': 'ValidationException:http://internal.amazon.com/coral/com.amazon.bedrock/'}, 'RetryAttempts': 0}, 'message': 'Malformed input request, please reformat your input and try again.'}
+2024-11-30 16:03:02,901 - ERROR - No images were successfully generated across all attempts
+2024-11-30 16:03:02,903 - INFO - 127.0.0.1 - - [30/Nov/2024 16:03:02] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 16:06:35,547 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:06:35,553 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:06:35,559 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:06:35,758 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:06:36,262 - INFO - Found credentials in environment variables.
+2024-11-30 16:06:36,336 - WARNING -  * Debugger is active!
+2024-11-30 16:06:36,336 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:06:39,552 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:06:39,552 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:06:39,567 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:06:40,734 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:06:41,214 - INFO - Found credentials in environment variables.
+2024-11-30 16:06:41,281 - WARNING -  * Debugger is active!
+2024-11-30 16:06:41,282 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:07:05,270 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:07:05,271 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:07:05,290 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:07:05,760 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:07:17,806 - INFO - Found credentials in environment variables.
+2024-11-30 16:07:17,875 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 16:07:17,876 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 16:07:17,881 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:07:18,312 - INFO - Found credentials in environment variables.
+2024-11-30 16:07:18,368 - WARNING -  * Debugger is active!
+2024-11-30 16:07:18,369 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:07:50,356 - ERROR - Embedding dimension mismatch. Expected 1536, got 1024
+2024-11-30 16:07:50,357 - INFO - Image Generation Prompt: Ultra-realistic image: Rocketium - Hackathon AI is transforming the creative industry by empowering creative teams to produce more content, faster, and at lower costs. But this is only the beginning! Thereas a world of possibilities waiting to be unlocked, and we at Rocketium ar Creative direction: Professional, modern design. Technical specs: High-quality, crisp rendering. Requirements: Generate an Ad image containing info from the website url.
+2024-11-30 16:09:46,122 - INFO - 127.0.0.1 - - [30/Nov/2024 16:09:46] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 16:14:24,471 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:14:24,473 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:14:24,476 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:14:25,261 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:14:25,968 - INFO - Found credentials in environment variables.
+2024-11-30 16:14:26,083 - WARNING -  * Debugger is active!
+2024-11-30 16:14:26,083 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:18:25,444 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:18:25,445 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:18:25,446 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:18:26,311 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:18:27,074 - INFO - Found credentials in environment variables.
+2024-11-30 16:18:27,236 - WARNING -  * Debugger is active!
+2024-11-30 16:18:27,237 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:18:47,903 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:18:47,907 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:18:47,920 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:18:48,563 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:18:49,006 - INFO - Found credentials in environment variables.
+2024-11-30 16:18:49,057 - WARNING -  * Debugger is active!
+2024-11-30 16:18:49,057 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:19:07,033 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:19:07,033 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:19:07,048 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:19:07,441 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:19:07,831 - INFO - Found credentials in environment variables.
+2024-11-30 16:19:07,893 - WARNING -  * Debugger is active!
+2024-11-30 16:19:07,894 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:19:47,635 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:19:47,636 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:19:47,651 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 16:19:48,374 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 16:19:48,865 - INFO - Found credentials in environment variables.
+2024-11-30 16:19:48,915 - WARNING -  * Debugger is active!
+2024-11-30 16:19:48,915 - INFO -  * Debugger PIN: 135-752-866
+2024-11-30 16:24:13,388 - ERROR - Embedding dimension mismatch. Expected 1536, got 1024
+2024-11-30 16:24:13,405 - INFO - Image Generation Prompt: Ultra-realistic image: Rocketium - Hackathon AI is transforming the creative industry by empowering creative teams to produce more content, faster, and at lower costs. But this is only the beginning! Thereas a world of possibilities waiting to be unlocked, and we at Rocketium ar Creative direction: Professional, modern design. Technical specs: High-quality, crisp rendering. Requirements: Generate an Ad image containing info from the website url.
