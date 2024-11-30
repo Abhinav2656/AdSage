@@ -8,4 +8,5 @@ beautifulsoup4
 requests
 numpy
 python-dotenv
+faiss-cpu
 unidecode

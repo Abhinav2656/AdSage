@@ -1,66 +1,49 @@
 "use client";
 
-import { useState } from 'react';
-import { Button, Textarea } from "@nextui-org/react";
-import { Send, Loader2 } from 'lucide-react';
+import { useState } from "react";
+import { Button, Input } from "@nextui-org/react";
+import { Send, Loader2 } from "lucide-react";
 
 interface ImageGeneratorInputProps {
   onGenerateImages: (prompt: string) => Promise<void>;
   isLoading: boolean;
+  placeholderText?: string;
 }
 
-export const ImageGeneratorInput = ({ 
-  onGenerateImages, 
-  isLoading 
+export const ImageGeneratorInput = ({
+  onGenerateImages,
+  isLoading,
+  placeholderText = "Type your prompt here...",
 }: ImageGeneratorInputProps) => {
-  const [userPrompt, setUserPrompt] = useState('');
+  const [userPrompt, setUserPrompt] = useState("");
 
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    
-    if (isLoading) return;
+    if (isLoading || !userPrompt.trim()) return;
     
     onGenerateImages(userPrompt);
+    setUserPrompt("");
   };
 
   return (
-    <div className="z-10 bg-zinc-900 absolute bottom-0 left-0 w-full">
-      <div className="mx-2 flex flex-row gap-3 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
-        <div className="relative flex h-full flex-1 items-stretch md:flex-col">
-          <div className="relative flex flex-col w-full flex-grow p-4">
-            <form onSubmit={handleSubmit} className="relative">
-              <Textarea
-                minRows={4}
-                autoFocus
-                value={userPrompt}
-                onChange={(e) => setUserPrompt(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSubmit();
-                    setUserPrompt("");
-                  }
-                }}
-                placeholder="Optional: Enter additional prompt (e.g., style, theme)"
-                className="resize-none bg-zinc-800 hover:bg-zinc-900 rounded-xl text-base"
-              />
-
-              <Button
-                size="sm"
-                type="submit"
-                className="absolute z-10 border border-border bg-zinc-900 right-2 bottom-2"
-                isDisabled={isLoading}
-              >
-                {isLoading ? (
-                  <Loader2 className="size-4 animate-spin" />
-                ) : (
-                  <Send className="size-4" />
-                )}
-              </Button>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div className="fixed bottom-0 left-0 w-full bg-zinc-800 p-4 flex items-center gap-2">
+      <form onSubmit={handleSubmit} className="flex flex-1">
+        <Input
+          type="text"
+          value={userPrompt}
+          onChange={(e) => setUserPrompt(e.target.value)}
+          placeholder={placeholderText}
+          className="flex-1 bg-zinc-900 text-white px-4 py-2 rounded-lg"
+        />
+        <Button
+          size="sm"
+          type="submit"
+          isDisabled={isLoading || !userPrompt.trim()}
+          className="ml-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
+        >
+          {isLoading ? <Loader2 className="animate-spin" /> : <Send />}
+        </Button>
+      </form>
     </div>
   );
 };

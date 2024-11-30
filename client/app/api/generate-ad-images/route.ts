@@ -4,7 +4,8 @@ export async function POST(request: NextRequest) {
   try {
     const { url, user_prompt } = await request.json();
 
-    if (!url) {
+    // Allow empty strings, but ensure url is defined
+    if (url === undefined) {
       return NextResponse.json(
         { error: 'URL is required' }, 
         { status: 400 }
@@ -17,7 +18,10 @@ export async function POST(request: NextRequest) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ url, user_prompt }),
+      body: JSON.stringify({ 
+        url: url || '',  // This can now be an empty string
+        user_prompt 
+      }),
     });
 
     const data = await backendResponse.json();

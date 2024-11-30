@@ -1,28 +1,27 @@
 "use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import { Images } from "./Images";
 import { ImageGeneratorInput } from "./ImageGeneratorInput";
 
-export const ImageGeneratorWrapper = ({ url }: { url: string }) => {
+export const ImageGeneratorWrapper = ({ url }: { url?: string }) => {
   const [images, setImages] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const handleGenerateImages = async (userPrompt: string) => {
-    // Reset previous state
     setImages([]);
     setError(null);
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/generate-ad-images', {
-        method: 'POST',
+      const response = await fetch("/api/generate-ad-images", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ 
-          url, 
+          url: url || '', // Send empty string if no URL is provided
           user_prompt: userPrompt 
         }),
       });
@@ -30,26 +29,31 @@ export const ImageGeneratorWrapper = ({ url }: { url: string }) => {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to generate images');
+        throw new Error(data.error || "Failed to generate images");
       }
 
       setImages(data.images);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+      setError(err instanceof Error ? err.message : "An unexpected error occurred");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="relative min-h-full bg-zinc-900 flex divide-y divide-zinc-700 flex-col justify-between gap-2">
-      <div className="flex-1 text-black bg-zinc-800 justify-between flex flex-col">
-        <Images images={images} url={url} error={error} />
-      </div>
-
+    <div className="flex flex-col h-screen bg-zinc-900">
+      {url && url !== '' && (
+        <div className="text-white p-4 text-sm">
+          Generating images based on website: {url}
+        </div>
+      )}
+      <Images images={images} url={url} error={error} />
       <ImageGeneratorInput 
         onGenerateImages={handleGenerateImages} 
-        isLoading={isLoading}
+        isLoading={isLoading} 
+        placeholderText={url && url !== '' 
+          ? "Add additional details..." 
+          : "Describe the image you want to generate"}
       />
     </div>
   );
