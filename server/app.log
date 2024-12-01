@@ -189,3 +189,74 @@
 2024-11-30 16:19:48,915 - INFO -  * Debugger PIN: 135-752-866
 2024-11-30 16:24:13,388 - ERROR - Embedding dimension mismatch. Expected 1536, got 1024
 2024-11-30 16:24:13,405 - INFO - Image Generation Prompt: Ultra-realistic image: Rocketium - Hackathon AI is transforming the creative industry by empowering creative teams to produce more content, faster, and at lower costs. But this is only the beginning! Thereas a world of possibilities waiting to be unlocked, and we at Rocketium ar Creative direction: Professional, modern design. Technical specs: High-quality, crisp rendering. Requirements: Generate an Ad image containing info from the website url.
+2024-11-30 16:29:37,314 - INFO - 127.0.0.1 - - [30/Nov/2024 16:29:37] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 16:30:08,523 - ERROR - Embedding dimension mismatch. Expected 1536, got 1024
+2024-11-30 16:30:08,525 - INFO - Image Generation Prompt: Ultra-realistic image: Rocketium - Hackathon AI is transforming the creative industry by empowering creative teams to produce more content, faster, and at lower costs. But this is only the beginning! Thereas a world of possibilities waiting to be unlocked, and we at Rocketium ar Creative direction: Professional, modern design. Technical specs: High-quality, crisp rendering. Requirements: Generate an Ad image containing info from the website url.
+2024-11-30 16:35:36,738 - INFO - 127.0.0.1 - - [30/Nov/2024 16:35:36] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 17:17:58,232 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 17:17:58,236 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 17:17:58,236 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 17:17:59,598 - INFO -  * Restarting with watchdog (inotify)
+2024-11-30 22:32:43,403 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 22:32:43,405 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 22:32:43,406 - INFO -  * Restarting with stat
+2024-11-30 22:32:43,889 - WARNING -  * Debugger is active!
+2024-11-30 22:32:43,907 - INFO -  * Debugger PIN: 783-049-581
+2024-11-30 22:35:36,883 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 22:35:36,884 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 22:35:36,885 - INFO -  * Restarting with stat
+2024-11-30 22:35:37,394 - WARNING -  * Debugger is active!
+2024-11-30 22:35:37,395 - INFO -  * Debugger PIN: 783-049-581
+2024-11-30 22:41:44,818 - ERROR - Embedding generation error: 'BedrockProcessor' object has no attribute 'max_prompt_length'
+2024-11-30 22:41:44,819 - INFO - Image Generation Prompt: Professional design: Generic advertisement design Generate image of a penguin in the sea Creative direction: Modern, visually striking. Style: Clean, impactful imagery.
+2024-11-30 22:41:44,819 - ERROR - Image generation error: 'BedrockProcessor' object has no attribute 'bedrock_runtime'
+2024-11-30 22:41:44,819 - ERROR - Image generation error: 'BedrockProcessor' object has no attribute 'bedrock_runtime'
+2024-11-30 22:41:44,820 - INFO - 127.0.0.1 - - [30/Nov/2024 22:41:44] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 22:44:27,360 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 22:44:27,360 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 22:44:27,361 - INFO -  * Restarting with stat
+2024-11-30 22:44:27,733 - WARNING -  * Debugger is active!
+2024-11-30 22:44:27,733 - INFO -  * Debugger PIN: 783-049-581
+2024-11-30 22:45:08,324 - ERROR - Embedding generation error: 'BedrockProcessor' object has no attribute 'max_prompt_length'
+2024-11-30 22:45:08,325 - INFO - Image Generation Prompt: Professional design: Generic advertisement design Generate advertisement image for mcdonalds Creative direction: Modern, visually striking. Style: Clean, impactful imagery.
+2024-11-30 22:45:08,325 - ERROR - Image generation error: 'BedrockProcessor' object has no attribute 'bedrock_runtime'
+2024-11-30 22:45:08,325 - ERROR - Image generation error: 'BedrockProcessor' object has no attribute 'bedrock_runtime'
+2024-11-30 22:45:08,325 - INFO - 127.0.0.1 - - [30/Nov/2024 22:45:08] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 22:46:17,023 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 22:46:17,117 - INFO -  * Restarting with stat
+2024-11-30 22:46:17,653 - WARNING -  * Debugger is active!
+2024-11-30 22:46:17,654 - INFO -  * Debugger PIN: 783-049-581
+2024-11-30 22:46:18,666 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 22:46:18,766 - INFO -  * Restarting with stat
+2024-11-30 22:46:19,278 - INFO - Found credentials in environment variables.
+2024-11-30 22:46:19,373 - WARNING -  * Debugger is active!
+2024-11-30 22:46:19,373 - INFO -  * Debugger PIN: 783-049-581
+2024-11-30 22:46:56,922 - ERROR - Embedding generation error: An error occurred (ExpiredTokenException) when calling the InvokeModel operation: The security token included in the request is expired
+2024-11-30 22:46:56,923 - INFO - Image Generation Prompt: Professional design: Generic advertisement design Generate advertisement image for mcdonalds Creative direction: Modern, visually striking. Style: Clean, impactful imagery.
+2024-11-30 22:46:57,981 - ERROR - Image generation error: An error occurred (ExpiredTokenException) when calling the InvokeModel operation: The security token included in the request is expired
+2024-11-30 22:46:58,242 - ERROR - Image generation error: An error occurred (ExpiredTokenException) when calling the InvokeModel operation: The security token included in the request is expired
+2024-11-30 22:46:58,243 - INFO - 127.0.0.1 - - [30/Nov/2024 22:46:58] "POST /generate-ad-images HTTP/1.1" 200 -
+2024-11-30 23:49:02,029 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://172.24.42.22:5001
+2024-11-30 23:49:02,031 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 23:49:02,032 - INFO -  * Restarting with stat
+2024-11-30 23:49:02,281 - WARNING -  * Debugger is active!
+2024-11-30 23:49:02,288 - INFO -  * Debugger PIN: 783-049-581
+2024-11-30 23:50:27,669 - INFO -  * Detected change in '/home/abhi9ab/dev/Rocketium-project/server/app.py', reloading
+2024-11-30 23:50:27,750 - INFO -  * Restarting with stat
+2024-11-30 23:53:39,690 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 23:53:39,690 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 23:53:39,691 - INFO -  * Restarting with stat
+2024-11-30 23:53:39,443 - WARNING -  * Debugger is active!
+2024-11-30 23:53:39,451 - INFO -  * Debugger PIN: 783-049-581
+2024-11-30 23:55:25,530 - ERROR - Embedding generation error: 'BedrockProcessor' object has no attribute 'max_prompt_length'
+2024-11-30 23:55:25,531 - INFO - Image Generation Prompt: Professional design: generate a cat on a table Generic advertisement design Creative direction: Modern, visually striking. Style: Clean, impactful imagery.
+2024-11-30 23:55:25,532 - ERROR - Image generation error: 'BedrockProcessor' object has no attribute 'bedrock_runtime'
+2024-11-30 23:55:25,532 - ERROR - Image generation error: 'BedrockProcessor' object has no attribute 'bedrock_runtime'
+2024-11-30 23:55:25,534 - INFO - 127.0.0.1 - - [30/Nov/2024 23:55:25] "POST /generate-ad-images HTTP/1.1" 200 -

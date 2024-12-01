@@ -10,3 +10,4 @@ numpy
 python-dotenv
 faiss-cpu
 unidecode
+PyPDF2

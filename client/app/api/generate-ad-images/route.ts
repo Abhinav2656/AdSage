@@ -30,7 +30,13 @@ export async function POST(request: NextRequest) {
       throw new Error(data.error || 'Failed to generate images');
     }
 
-    return NextResponse.json(data);
+    // If the backend returns an image as a base64 string, forward it to the client
+    if (data.image) {
+      return NextResponse.json({ image: data.image });
+    } else {
+      throw new Error('No image data received');
+    }
+    
   } catch (error) {
     console.error('Image generation error:', error);
     return NextResponse.json(
