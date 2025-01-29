@@ -55,6 +55,6 @@ https://drive.google.com/file/d/1vbZNs0eb-jdwJxZIwU4Th1JM2RC7RKWc/view?usp=drive
 ---
 
 ## License
-MIT
+[MIT](https://github.com/abhi9ab/Rocketium-project/blob/main/LICENSE)
 
 ---
