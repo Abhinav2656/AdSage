@@ -26,7 +26,7 @@ Our AI-powered web application that transforms website content into unique adver
 
 ## Demo 
 
-https://drive.google.com/file/d/1vbZNs0eb-jdwJxZIwU4Th1JM2RC7RKWc/view?usp=drive_link
+https://github.com/user-attachments/assets/0c102f4e-d342-49f9-a9bb-83cd415f1f88
 
 ---
 
